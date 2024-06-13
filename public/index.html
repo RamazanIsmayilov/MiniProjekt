@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>Products page</title>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="container 2xl:max-w-[1280px] py-7">
+        <div class="heading flex items-center justify-between">
+            <h1 class="text-3xl font-bold mb-4">Products</h1>
+            <div class="flex items-center gap-3">
+                <div id="priceinput">
+                    <p>$200</p>
+                    <input type="range">
+                </div>
+                <div id="categorybtn" class="flex gap-3">
+                    <button onclick="filterCategory()" class="bg-gray-700 text-white px-4 py-2 rounded-lg">All</button>
+                    <button onclick="filterCategory('men\'s clothing')"
+                        class="bg-gray-700 text-white px-4 py-2 rounded-lg">men's clothing</button>
+                    <button onclick="filterCategory('jewelery')"
+                        class="bg-gray-700 text-white px-4 py-2 rounded-lg">jewelery</button>
+                    <button onclick="filterCategory('electronics')"
+                        class="bg-gray-700 text-white px-4 py-2 rounded-lg">electronics</button>
+                    <button onclick="filterCategory('women\'s clothing')"
+                        class="bg-gray-700 text-white px-4 py-2 rounded-lg">women's clothing</button>
+                </div>
+                <input type="text" id="searchInput" placeholder="Search products..."
+                    class="rounded  outline-rose-100 p-2  w-100">
+                <a href="/cart" class="font-semibold">Cart</a>
+            </div>
+        </div>
+        <div id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5"></div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
