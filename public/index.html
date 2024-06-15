@@ -14,25 +14,38 @@
         <div class="heading flex items-center justify-between">
             <h1 class="text-3xl font-bold mb-4">Products</h1>
             <div class="flex items-center gap-3">
-                <div id="priceinput">
-                    <p>$200</p>
-                    <input type="range">
-                </div>
-                <div id="categorybtn" class="flex gap-3">
-                    <button onclick="filterCategory()" class="bg-gray-700 text-white px-4 py-2 rounded-lg">All</button>
-                    <button onclick="filterCategory('men\'s clothing')"
-                        class="bg-gray-700 text-white px-4 py-2 rounded-lg">men's clothing</button>
-                    <button onclick="filterCategory('jewelery')"
-                        class="bg-gray-700 text-white px-4 py-2 rounded-lg">jewelery</button>
-                    <button onclick="filterCategory('electronics')"
-                        class="bg-gray-700 text-white px-4 py-2 rounded-lg">electronics</button>
-                    <button onclick="filterCategory('women\'s clothing')"
-                        class="bg-gray-700 text-white px-4 py-2 rounded-lg">women's clothing</button>
-                </div>
                 <input type="text" id="searchInput" placeholder="Search products..."
                     class="rounded  outline-rose-100 p-2  w-100">
-                <a href="/cart" class="font-semibold">Cart</a>
             </div>
+        </div>
+        <p>Category filter:</p>
+        <div class="flex gap-3 mt-5">
+            <button onclick="filterCategory()" class="bg-gray-700 text-white px-4 py-2 rounded-lg">All</button>
+            <button onclick="filterCategory('Monitors & Cards')"
+                class="bg-gray-700 text-white px-4 py-2 rounded-lg">Monitors & Cards</button>
+            <button onclick="filterCategory('Speakers & Headphones')"
+                class="bg-gray-700 text-white px-4 py-2 rounded-lg">Speakers & Headphones</button>
+            <button onclick="filterCategory('Gaming chairs')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">Gaming
+                chairs</button>
+            <button onclick="filterCategory('Power Supplies')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">Power
+                Supplies</button>
+            <button onclick="filterCategory('Gaming peripherals')"
+                class="bg-gray-700 text-white px-4 py-2 rounded-lg">Gaming peripherals</button>
+        </div>
+
+        <p class="mt-5">Brand filter:</p>
+        <div class="flex gap-3 mt-5">
+            <button onclick="filterBrand()" class="bg-gray-700 text-white px-4 py-2 rounded-lg">All</button>
+            <button onclick="filterBrand('Samsung')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">Samsung</button>
+            <button onclick="filterBrand('Acer')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">Acer</button>
+            <button onclick="filterBrand('LG')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">LG</button>
+            <button onclick="filterBrand('HyperX')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">HyperX</button>
+            <button onclick="filterBrand('Kepler Brooks')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">Kepler Brooks</button>
+            <button onclick="filterBrand('Sony PS5')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">Sony PS5</button>
+            <button onclick="filterBrand('Electrobot')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">Electrobot</button>
+            <button onclick="filterBrand('Lenova')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">Lenova</button>
+            <button onclick="filterBrand('XFX')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">XFX</button>
+            <button onclick="filterBrand('KandE')" class="bg-gray-700 text-white px-4 py-2 rounded-lg">KandE</button>
         </div>
         <div id="products" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5"></div>
     </div>
