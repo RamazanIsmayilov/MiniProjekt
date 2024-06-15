@@ -1,5 +1,9 @@
 const products = document.querySelector('#products');
 const searchInput = document.querySelector('#searchInput');
+const minPriceInput = document.querySelector('#minPrice');
+const maxPriceInput = document.querySelector('#maxPrice');
+const minPriceLabel = document.querySelector('#minPriceLabel');
+const maxPriceLabel = document.querySelector('#maxPriceLabel');
 let allProducts;
 let filteredProducts;
 
@@ -29,6 +33,20 @@ const displayProducts = (productsToDisplay) => {
     products.appendChild(card);
   })
 }
+
+const filterPrice = () => {
+  const minPrice = minPriceInput.value;
+  const maxPrice = maxPriceInput.value;
+
+  filteredProducts = allProducts.filter(item => item.price >= minPrice && item.price <= maxPrice);
+
+  minPriceLabel.textContent = minPriceInput.value;
+  maxPriceLabel.textContent = maxPriceInput.value;
+  displayProducts(filteredProducts);
+}
+
+minPriceInput.addEventListener('input', filterPrice);
+maxPriceInput.addEventListener('input', filterPrice);
 
 const filterCategory = (category) => {
   if (!category) {
